@@ -33,6 +33,7 @@ angular.module('angular-advanced-searchbox', [])
                 '$scope', '$attrs', '$element', '$timeout', '$filter', 'setFocusFor',
                 function ($scope, $attrs, $element, $timeout, $filter, setFocusFor) {
 
+                    // TODO don't use scope
                     $scope.parametersLabel = $scope.parametersLabel || 'Parameter Suggestions';
                     $scope.parametersDisplayLimit = $scope.parametersDisplayLimit || 8;
                     $scope.placeholder = $scope.placeholder || 'Search ...';
