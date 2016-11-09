@@ -20,7 +20,10 @@ angular.module('angular-advanced-searchbox', [])
                 parametersLabel: '@',
                 parametersDisplayLimit: '=?',
                 placeholder: '@',
-                searchThrottleTime: '=?'
+                searchThrottleTime: '=?',
+                searchIcon: '@',
+                trashIcon: '@',
+                plusIcon: '@'
             },
             replace: true,
             templateUrl: function(element, attr) {
@@ -37,6 +40,10 @@ angular.module('angular-advanced-searchbox', [])
                     $scope.searchParams = [];
                     $scope.searchQuery = '';
                     $scope.setFocusFor = setFocusFor;
+                    $scope.searchIcon = $scope.searchIcon || 'glyphicon glyphicon-search';
+                    $scope.trashIcon = $scope.trashIcon || 'glyphicon glyphicon-trash';
+                    $scope.plusIcon = $scope.plusIcon || 'glyphicon glyphicon-plus';
+
                     var searchThrottleTimer;
                     var changeBuffer = [];
 
